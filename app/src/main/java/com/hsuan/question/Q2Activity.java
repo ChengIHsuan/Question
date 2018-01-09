@@ -14,10 +14,11 @@ public class Q2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_q2);
+    }
+
+    public void OK(View view) {
         edA2 = (EditText) findViewById(R.id.ed_a2);
         a2 = edA2.getText().toString();
-    }
-    public void OK(View view) {
         getIntent().putExtra("Answer2", a2);
         setResult(RESULT_OK, getIntent());
         finish();
